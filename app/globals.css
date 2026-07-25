@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*
+  Design tokens. Tailwind v4 auto-generates utilities from these — defining
+  --color-ledger here gives you bg-ledger / text-ledger / border-ledger, etc.
+  "Ledger" is the accent: a deep ledger-book green tied deliberately to the
+  product's core idea (published articles earn money), not a default blue.
+*/
+@theme {
+  --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink-950: #1c1917;
+  --color-ink-700: #44403c;
+  --color-ink-500: #78716c;
+
+  --color-paper: #faf9f7;
+  --color-surface: #ffffff;
+  --color-line: #e7e4df;
+
+  --color-ledger: #145c43;
+  --color-ledger-dark: #0e4632;
+  --color-ledger-soft: #e5f1eb;
+}
+
+body {
+  font-feature-settings: 'tnum' 1; /* tabular numerals for balances */
+}
